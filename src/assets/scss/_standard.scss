@@ -1,0 +1,477 @@
+$screen-xs: 767px;
+
+$satoshi: 'Satoshi-Variable';
+
+/****variables*****/
+//#5e2b19
+
+$primary-color-01: #03001C;
+$primary-color-02: rgba(#163b5d, 0.7);
+$secondary-color-01: #301E67;
+
+$secondary-color-02: #5B8FB9;
+$text-color-01: #B6EADA;
+$bg-color-01: #0D1B23;
+$border-color: #A7A7A7;
+$border-color-02: #354148;
+$border-color-03: #101E26;
+$lt-blue: #1877F2;
+$sky-blue: #1DA1F2;
+$red: #251887;
+$dark-red: #251887;
+$orange: #FC8B59;
+$purple: #C29FEF;
+
+
+$primary-gradiant: linear-gradient(180deg, #061821, #233B48);
+$secondary-gradiant: linear-gradient(180deg, #ffffff, #ECECEC 20%, #808080 55%);
+
+$white: #fff;
+$black: #000;
+
+
+/****** scroll-bar ******/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  //font-family: $satoshi;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: $white;
+  background: $primary-color-01;
+  transition: all 0.3s ease-in-out;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  &.active {
+    @media only screen and (max-width: 1024px) {
+      overflow: hidden;
+    }
+  }
+}
+
+/***container****/
+.container {
+  max-width: 1170px;
+  @media only screen and (min-width: 1900px) {
+    max-width: 1600px;
+  }
+  @media only screen and (max-width: 1899px) and (max-width: 1600px) {
+    max-width: 1320px;
+  }
+}
+
+/****** Typography ******/
+h1 {
+  //font-family: $satoshi;
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 300;
+  color: $white;
+  @media screen and (max-width: 1199px) {
+    font-size: 36px;
+    line-height: 46px;
+  }
+
+  span {
+    font-size: 55px;
+    line-height: 91px;
+    font-weight: 500;
+    color: $white;
+    @media screen and (max-width: 1199px) {
+      font-size: 36px;
+      line-height: 46px;
+    }
+  }
+}
+
+h2, .h2 {
+  //font-family: $STIXs !important;
+  font-size: 35px;
+  line-height: 37px;
+  font-weight: 700;
+  color: $white;
+  letter-spacing: -0.3px;
+  margin: 0;
+  @media only screen and (max-width: $screen-xs) {
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  span {
+    //font-family: $satoshi;
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 700;
+  }
+
+  &.small {
+    font-size: 30px;
+    margin: 0;
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+    }
+  }
+}
+
+
+h3 {
+  //font-family: $satoshi;
+  color: $white;
+  font-size: 28px;
+  line-height: 37px;
+  letter-spacing: -0.3px;
+  font-weight: 700;
+  @media only screen and (max-width: $screen-xs) {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  &.small {
+    font-size: 24px;
+    @media only screen and (max-width: $screen-xs) {
+      font-size: 18px;
+    }
+  }
+
+}
+
+// h4 {
+//   //font-family: $satoshi;
+//   font-weight: 700;
+//   font-size: 20px;
+//   line-height: 20px;
+//   color: $metallic-black;
+// }
+
+p, .p {
+  //font-family: $satoshi;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 400;
+  color: $white;
+  margin: 0;
+  @media only screen and (max-width: $screen-xs) {
+    font-size: 16px;
+  }
+
+  &.small {
+    font-size: 16px;
+    line-height: 28px;
+    @media only screen and (max-width: $screen-xs) {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  &.chat {
+    font-size: 17px;
+    line-height: 22px;
+    margin: 0;
+  }
+
+}
+
+
+a {
+  //font-family: $satoshi;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: $white;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+
+  &:hover {
+    color: $white;
+  }
+
+  &.hover {
+    font-size: 55px;
+    line-height: 91px;
+    font-weight: 500;
+    color: $white;
+    @media screen and (max-width: 1200px) and(min-width: 768px) {
+      font-size: 40px;
+      line-height: 55px;
+    }
+    @media screen and (max-width: $screen-xs) {
+      font-size: 30px;
+      line-height: 46px;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      left: 0;
+      bottom: 0;
+      transition: all 0.3s ease-in-out;
+      border-bottom: 2px dotted $white;
+
+    }
+  }
+
+  span {
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -0.3px;
+
+  }
+
+  &.large {
+    font-size: 20px;
+    line-height: 37px;
+    color: $white;
+    @media only screen and (max-width: $screen-xs) {
+      font-size: 16px;
+    }
+  }
+
+  &.small {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 400;
+    color: $white;
+  }
+}
+
+ul {
+  padding-left: 0;
+  margin-bottom: 0;
+
+  li {
+    list-style: none;
+    display: inline-block;
+  }
+}
+
+strong {
+  //font-family: $satoshi;
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 700;
+  color: $white;
+  letter-spacing: -0.3px;
+  @media screen and (max-width: 767px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &.head-small {
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0;
+    @media screen and (max-width: 1599px) and (min-width: 1200px) {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  &.small {
+    font-size: 20px;
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+    }
+  }
+}
+
+/****** Buttons ******/
+.btn-style {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 200px;
+  height: 60px;
+  padding: 5px 30px 10px;
+  border-radius: 10px;
+  border: 2px solid $primary-color-01;
+  text-decoration: none;
+  background: $primary-color-01;
+  transition: all .3s ease-in-out;
+  font-size: 20px;
+  line-height: 0;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: $white;
+  margin: 0 auto;
+  cursor: pointer;
+  @media only screen and (max-width: $screen-xs) {
+    max-width: 230px;
+    height: 63px;
+    font-size: 20px;
+  }
+
+  &:hover {
+    background: transparent;
+    color: $primary-color-01;
+  }
+
+  &.formBtn {
+    width: 100%;
+    border-radius: 14px;
+    height: 72px;
+    margin: 0 auto;
+    letter-spacing: 0.5px;
+    padding: 20px 22px 22px 22px;
+    @media only screen and (max-width: $screen-xs) {
+      max-width: 378px;
+    }
+  }
+
+  &.icon-btn {
+    width: 46px;
+    height: 46px;
+    background: $white;
+    border-radius: 50%;
+    border: unset;
+    font-size: 20px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media only screen and (max-width: $screen-xs) {
+      width: 39px;
+      height: 39px;
+      font-size: 13px;
+    }
+  }
+
+  &.continue-btn {
+    position: absolute;
+    max-width: 203px;
+    height: 60px;
+    border-radius: 0 20px 0 20px;
+    top: 0;
+    right: 0;
+    letter-spacing: 0.3px;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 38px;
+    @media only screen and (max-width: $screen-xs) {
+      max-width: 111px;
+      height: 42px;
+      font-size: 12px;
+      border-radius: 0 8px 0 8px;
+    }
+  }
+
+  &.submit-btn {
+    background: transparent;
+    border: none;
+    width: 40px;
+    height: 66px;
+    padding: 0;
+  }
+
+  &.review-btn {
+    width: 112px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 38px;
+    border: none;
+    font-size: 12px;
+    line-height: 19px;
+    font-weight: 400;
+    letter-spacing: -0.3px;
+    color: $white;
+    backdrop-filter: blur(30px);
+  }
+
+  &.intelligent-btn {
+    width: 128.89px;
+    height: 21.37px;
+    background: $white;
+    border-radius: 0 8px 0 8px;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 3px 3px 5px 3px;
+
+    p {
+      color: #142434;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 12px;
+      margin: 0;
+    }
+  }
+
+  &.circleBtn {
+    width: 101px;
+    height: 101px;
+    position: absolute;
+    background: $border-color-02;
+    border: 1px solid $border-color-02;
+    font-size: 22px;
+    color: $white;
+    z-index: 12;
+    border-radius: 50%;
+    padding: 0;
+    @media only screen and (max-width: $screen-xs) {
+      width: 73px;
+      height: 73px;
+      font-size: 20px;
+    }
+  }
+}
+
+// /***********input*********/
+.form-group {
+  margin-bottom: 14px;
+
+  input.form-control {
+    height: 65px;
+    background: transparent;
+    border-radius: 10px;
+    padding: 5px 24px;
+    text-transform: capitalize;
+    border: 1px solid $border-color;
+    color: $border-color;
+
+    &::placeholder {
+      color: $border-color;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 400;
+    }
+
+    &:focus {
+      box-shadow: none;
+
+
+    }
+  }
+}
+
+// /****** Colored Icon ******/
+.fa-google {
+  background: linear-gradient(to bottom left, transparent 49%, #fbbc05 50%) 0 25%/48% 40%,
+  linear-gradient(to top left, transparent 49%, #fbbc05 50%) 0 75%/48% 40%,
+  linear-gradient(-40deg, transparent 53%, #ea4335 54%),
+  linear-gradient(45deg, transparent 46%, #4285f4 48%),
+  #34a853;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+// /****custom-classes*****/
+
+
+.custom-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

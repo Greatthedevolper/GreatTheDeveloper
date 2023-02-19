@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'STIXSizeFourSym';
+    src: url('STIXSizeFourSym-Bold.eot');
+    src: url('STIXSizeFourSym-Bold.eot?#iefix') format('embedded-opentype'),
+        url('STIXSizeFourSym-Bold.woff2') format('woff2'),
+        url('STIXSizeFourSym-Bold.woff') format('woff'),
+        url('STIXSizeFourSym-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
