@@ -2,18 +2,21 @@
   <div class="chat-page-wrapper">
     <ChatMember/>
     <ChatBox/>
+    <FocusMeter/>
   </div>
 </template>
 
 <script>
 import ChatBox from '@/components/ChatBox'
 import ChatMember from '@/components/ChatMembers'
+import FocusMeter from '@/components/FocusMeter'
 
 export default {
   name: 'ChatPage',
   components: {
     ChatBox,
     ChatMember,
+    FocusMeter
   },
 
   data() {

@@ -1,15 +1,14 @@
 import { createWebHistory, createRouter } from "vue-router";
 import IntroPage from '@/views/IntroPage'
 import GetStarted from '@/views/GetStarted'
-import LoginPage from '@/views/LoginPage'
+import AboutMe from '@/views/AbourMe'
 import SignupPage from '@/views/SignupPage'
-import CoursePage from '@/views/CoursePage'
+// import CoursePage from '@/views/CoursePage'
 import SettingPage from '@/views/SettingPage'
 import ProgressPage from '@/views/ProgressPage'
 import VideoPage from '@/views/VideoPage'
 import ChatPage from '@/views/ChatPage'
 import ReviewPage from '@/views/ReviewPage'
-import TestPage from '@/views/TestPage'
 
 const routes = [
     {
@@ -23,19 +22,14 @@ const routes = [
         component: GetStarted
     },
     {
-        path: '/login',
-        name: 'LoginPage',
-        component: LoginPage
+        path: '/about-me',
+        name: 'AboutMe',
+        component: AboutMe
     },
     {
         path: '/signup',
         name: 'SignupPage',
         component: SignupPage
-    },
-    {
-        path: '/course',
-        name: 'CoursePage',
-        component: CoursePage
     },
     {
         path: '/progress',
@@ -61,11 +55,6 @@ const routes = [
         path: '/review',
         name: 'ReviewPage',
         component: ReviewPage
-    },
-    {
-        path: '/test',
-        name: 'TestPage',
-        component: TestPage
     },
 ];
 

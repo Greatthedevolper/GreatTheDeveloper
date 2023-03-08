@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-md-2 col-5 align-self-center">
           <router-link to="/" class="white-logo">
-            <img src="../assets/images/color-logo.svg" alt="logo">
+            <img src="../assets/images/azeem-white-logo.png" alt="logo">
           </router-link>
           <router-link to="/" class="black-logo">
             <img src="../assets/images/black-logo.svg" alt="logo">
@@ -14,11 +14,12 @@
           <div class="menu-wrapper">
             <div class="row">
               <div class=" col-8 ">
+                <i class="material-icons">menu</i>
                 <div class="navbar-menu" :class="{active: isActive}">
                   <ul class="menu">
-                    <i class="fa-solid fa-xmark"   @click="hideMenu()"></i>
+                    <i class="fa-solid fa-xmark" @click="hideMenu()"></i>
                     <li v-for="item in menuLinks" :key="item.id" @click="hideMenu()">
-                      <router-link :to="item.link" >{{ item.title }}</router-link>
+                      <router-link :to="item.link">{{ item.title }}</router-link>
                     </li>
                   </ul>
                 </div>
@@ -27,11 +28,13 @@
                 <div class="action-div custom-flex">
                   <div class="profile-div">
                     <div class="img-div custom-flex ">
-                      <img src="../assets/images/profile-pic.svg" alt="profile" @click="showMenu()" >
+                      <img src="../assets/images/mine-profile-image.jpg" alt="profile" @click="showMenu()">
                     </div>
                     <div class="content-div">
-                      <strong class="d-block head-small">Etan Castro</strong>
-                      <router-link to="#" class="small">Settings</router-link>
+
+                      <router-link to="#">
+                        <strong class="d-block head-small">Hire me</strong>
+                      </router-link>
                     </div>
                   </div>
                   <div class="theme-switch-btn">
@@ -68,9 +71,9 @@ export default {
       isActive: false,
       checked: true,
       menuLinks: [
-        {title: 'Courses', link: '/course'},
-        {title: 'Progress', link: '/progress'},
-        {title: 'Settings', link: '/setting'},
+        {title: 'Services', link: '/course'},
+        {title: 'Portfolio', link: '/progress'},
+        {title: 'Contact', link: '/setting'},
       ]
     }
   },
@@ -82,8 +85,8 @@ export default {
       this.isActive = !this.isActive
       this.$emit("sh0w")
     },
-    hideMenu(){
-      this.isActive=!this.isActive
+    hideMenu() {
+      this.isActive = !this.isActive
       this.$emit("hide")
     }
   },

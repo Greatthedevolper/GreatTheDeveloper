@@ -1,36 +1,34 @@
 @import "standard";
 @import "all.min.css";
+@import "material-icons.css";
+@import "../fonts/stylesheet.css";
 
 // *********** All Pages Scss **********//
 
 .home {
-  background: $primary-color-01;
+  background: url("../images/mine-intro-image.jpg") no-repeat center top;
   height: 100vh;
   position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
   #header {
     display: none;
   }
 
   .intro-wrapper {
-    .intro-lottie {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      max-width: 300px;
-      max-height: 300px;
-      margin: auto;
-      @media only screen and (max-width: $screen-xs) {
-        max-width: 220px;
-        max-height: 220px;
-      }
-    }
 
     .intro-logo {
       max-width: 217px;
-      position: absolute;
+      position:fixed;
+      z-index: 9;
       right: 98px;
       bottom: 70px;
       display: block;
@@ -44,6 +42,64 @@
 
       img {
         max-width: 100%;
+      }
+    }
+
+    .get-start-wrapper {
+      padding: 20px 40px;
+      border-radius: 10px;
+      text-align: center;
+      z-index: 99;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      max-width: 100%;
+      max-height: 300px;
+      margin: auto;
+      @media only screen and (max-width: $screen-xs) {
+        padding: 45px 32px;
+        margin: 28% auto auto auto;
+        max-width: 340px;
+      }
+
+      &:hover {
+        .hover {
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+      h1{
+        font-weight: 300;
+      }
+
+      p {
+        margin-bottom: 40px;
+        @media only screen and (max-width: $screen-xs) {
+          margin: 0;
+        }
+      }
+
+      .btn-style {
+        z-index: 99;
+        @media only screen and (max-width: $screen-xs) {
+          position: fixed;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          bottom: 15%;
+          border: 1px solid $secondary-color-01;
+          text-decoration: none;
+          background: $secondary-color-01;
+        }
+
+        //&:hover {
+        //  background: transparent;
+        //  color: $white;
+        //  border: 2px solid $white;
+        //}
       }
     }
   }
@@ -71,14 +127,12 @@
   }
 
   .get-start-wrapper {
-    background: $secondary-color-01;
-    max-width: 874px;
     margin: auto;
     padding: 20px 40px;
     border-radius: 10px;
     text-align: center;
     position: relative;
-    z-index: 9999;
+    z-index: 99;
     @media only screen and (max-width: $screen-xs) {
       padding: 45px 32px;
       margin: 28% auto auto auto;
@@ -108,7 +162,7 @@
         right: 0;
         margin: 0 auto;
         bottom: 15%;
-        border: 2px solid $secondary-color-01;
+        border: 1px solid $secondary-color-01;
         text-decoration: none;
         background: $secondary-color-01;
       }
@@ -138,6 +192,7 @@
     }
   }
 }
+
 
 .LoginPage,
 .SignupPage {
@@ -212,7 +267,7 @@
 }
 
 
-.CoursePage {
+.AboutMe {
 
   .course-page-wrapper {
     .course-banner {
@@ -1008,7 +1063,11 @@
           }
 
           img {
-            width: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+            width: 41px;
+            height: 41px;
           }
         }
 
@@ -1195,7 +1254,7 @@
   position: relative;
   padding: 35px 55px 35px 36px;
   z-index: 3;
-  width: 661px;
+  width: 100%;
   @media screen and (max-width: $screen-xs) {
     display: block;
   }
@@ -1220,26 +1279,23 @@
   }
 
   .continue-heading {
-    strong {
-      font-size: 18px;
-    }
+   padding-left: 30px;
   }
 
   .continue-body {
     display: flex;
     align-items: center;
-    column-gap: 19px;
-    margin: 15px 0 20px 0;
+    column-gap: 60px;
+    //margin: 15px 0 20px 0;
     @media only screen and (max-width: $screen-xs) {
       margin: 10px 0 18px 0;
     }
 
     .img-div {
-      border-radius: 12px;
-      background: $purple;
-      width: 118px;
-      height: 119px;
-      padding: 28px 25px 23px 25px;
+      background:$primary-color-02;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
       @media only screen and (max-width: $screen-xs) {
         width: 67px;
         height: 67px;
@@ -1247,8 +1303,11 @@
       }
 
       img {
-        width: 68px;
-        height: 68px;
+        width: 200px;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 50%;
         @media only screen and (max-width: $screen-xs) {
           width: 39px;
           height: 39px;
@@ -1257,13 +1316,14 @@
     }
 
     .content-div {
-      padding-right: 20px;
+
       @media only screen and (max-width: $screen-xs) {
         padding: 0;
       }
 
-      h3 {
-        margin: 0;
+      strong {
+        margin-bottom: 20px;
+        display: block;
         @media only screen and (max-width: $screen-xs) {
 
         }
@@ -1271,14 +1331,7 @@
 
       p {
         margin: 0;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        @media only screen and (max-width: $screen-xs) {
-          -webkit-line-clamp: 2;
-        }
+
       }
     }
   }
@@ -1581,18 +1634,24 @@
     margin-left: 25px;
     margin-top: 10px;
     padding: 6px 6px 0 6px;
-    background: red;
+    background: $black;
     border-top-left-radius: 510px;
     border-top-right-radius: 510px;
     @media only screen and (max-width: $screen-xs) {
       margin-left: 15px;
       width: 161px;
     }
-
-    img {
-      object-fit: cover;
-      @media only screen and (max-width: $screen-xs) {
-        width: 100%;
+    .mc-speedometer{
+      .arc-container{
+        .arc{
+          margin: 0 auto;
+        }
+        .arc-bg{
+          top: 0;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+        }
       }
     }
 

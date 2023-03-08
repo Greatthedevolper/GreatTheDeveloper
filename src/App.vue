@@ -1,5 +1,8 @@
 <template>
   <div :class="[this.$route.name, themeClass]">
+    <div id="loading-wrapper" :class="{'active' : !dataLoaded}">
+      <Vue3Lottie :animationData="LoaderJason"  class="intro-lottie" />
+    </div>
     <HeaderComponent @toggle="toggle()" @sh0w="shadowMenu()" @hide="hideMenu()"/>
     <router-view></router-view>
   </div>
@@ -7,14 +10,19 @@
 
 <script>
 import HeaderComponent from "@/components/Header.vue";
+import { Vue3Lottie } from 'vue3-lottie'
+import 'vue3-lottie/dist/style.css'
+import LoaderJason from "@/assets/json/infinity-loader.json";
 
 export default {
   name: "App",
   components: {
     HeaderComponent,
+    Vue3Lottie
   },
   data() {
     return {
+      LoaderJason,
       isActive: false,
       userDataRanking: null,
       dataLoaded: false,
@@ -22,8 +30,8 @@ export default {
     };
   },
   methods: {
-    handleAnimation: function (anim) {
-      this.anim = anim;
+    youAPI() {
+      this.dataLoaded = true
     },
     toggle: function () {
       var PageName = this.$route.name;
@@ -52,6 +60,12 @@ export default {
     },
   },
   mounted: function () {
+
+    window.setInterval(() => {
+      this.youAPI();
+    }, 6500)
+
+
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
 
@@ -70,4 +84,7 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+
+</style>
