@@ -1,7 +1,7 @@
 <template>
   <div class="carousel-wrapper">
     <div class="slider-heading">
-      <h2 class="small">{{ title }}</h2>
+      <h2 class="small">{{ title }}12</h2>
     </div>
     <carousel
         :breakpoints="breakpoints"
