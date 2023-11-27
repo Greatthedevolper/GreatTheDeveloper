@@ -33,7 +33,7 @@
       top:3%;
       display: block;
       @media only screen and (max-width: $screen-xs) {
-        max-width: 190px;
+        max-width: 100px;
         // right: 0;
         // left: 0;
         // margin: 0 auto;
@@ -95,6 +95,7 @@
         font-family: inherit;
         background: transparent;
         overflow: hidden;
+        margin-top: 10px;
         &:before {
           content: "About me";
           position: absolute;
