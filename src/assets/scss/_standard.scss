@@ -286,8 +286,8 @@ strong {
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 200px;
-  height: 60px;
+  min-width: 200px;
+  height: 40px;
   padding: 10px 30px 10px;
   border-radius: 10px;
   border: 1px solid $secondary-color-01;
