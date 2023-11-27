@@ -29,15 +29,15 @@
       max-width: 217px;
       position: fixed;
       z-index: 9;
-      left: 98px;
-      top: 70px;
+      left: 3%px;
+      top:3%;
       display: block;
       @media only screen and (max-width: $screen-xs) {
         max-width: 190px;
-        right: 0;
-        left: 0;
-        margin: 0 auto;
-        top: 10%;
+        // right: 0;
+        // left: 0;
+        // margin: 0 auto;
+        // top: 10%;
       }
 
       img {
@@ -59,9 +59,9 @@
       max-height: 300px;
       margin: auto;
       @media only screen and (max-width: $screen-xs) {
-        padding: 45px 32px;
-        margin: 28% auto auto auto;
-        max-width: 340px;
+        padding: 10px;
+        // margin: 28% auto auto auto;
+        // max-width: 340px;
       }
 
       &:hover {
