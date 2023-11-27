@@ -9,6 +9,7 @@ import ProgressPage from '@/views/ProgressPage'
 import VideoPage from '@/views/VideoPage'
 import ChatPage from '@/views/ChatPage'
 import ReviewPage from '@/views/ReviewPage'
+import ComingSoonPage from '@/views/ComingSoon.vue'
 
 const routes = [
     {
@@ -55,6 +56,11 @@ const routes = [
         path: '/review',
         name: 'ReviewPage',
         component: ReviewPage
+    },
+    {
+        path: '/coming-soon',
+        name: 'ComingSoonPage',
+        component: ComingSoonPage
     },
 ];
 

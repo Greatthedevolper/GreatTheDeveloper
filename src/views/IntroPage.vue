@@ -1,15 +1,15 @@
 <template>
   <div class="intro-wrapper">
-    <router-link to="/start" class="intro-logo">
+    <router-link to="#" class="intro-logo">
       <img src="../assets/images/azeem-white-logo.png" alt="logo"/>
     </router-link>
     <div class="get-start-wrapper">
       <h1> Hi, I am <br/>
-        <router-link to="/about-me" class="hover">Azeem U Rehman</router-link>
+        <router-link to="#" class="hover">Azeem U Rehman</router-link>
       </h1>
       <p>
-        A Full Stack Web Developer</p>
-      <router-link to="/about-me" class="btn-style">
+        A Frnt End Web Developer</p>
+      <router-link to="#" class="btn-style">
         About Me
       </router-link>
     </div>

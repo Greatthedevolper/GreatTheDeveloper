@@ -6,13 +6,14 @@
 // *********** All Pages Scss **********//
 
 .home {
-  background: url("../images/mine-intro-image.jpg") no-repeat center top;
+  // background: url("../images/mine-intro-image.png") no-repeat right center;
+  // filter: blur(20);
   height: 100vh;
   position: relative;
   &:after {
     content: "";
     position: absolute;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(173, 106, 220, 0.199);
     top: 0;
     left: 0;
     width: 100%;
@@ -24,13 +25,12 @@
   }
 
   .intro-wrapper {
-
     .intro-logo {
       max-width: 217px;
-      position:fixed;
+      position: fixed;
       z-index: 9;
-      right: 98px;
-      bottom: 70px;
+      left: 98px;
+      top: 70px;
       display: block;
       @media only screen and (max-width: $screen-xs) {
         max-width: 190px;
@@ -71,7 +71,7 @@
           }
         }
       }
-      h1{
+      h1 {
         font-weight: 300;
       }
 
@@ -84,16 +84,70 @@
 
       .btn-style {
         z-index: 99;
-        @media only screen and (max-width: $screen-xs) {
-          position: fixed;
+        padding: 0.9em 1.8em;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 4px;
+        color: transparent;
+        border: 3px solid #ff0;
+        font-size: 14px;
+        position: relative;
+        font-family: inherit;
+        background: transparent;
+        overflow: hidden;
+        &:before {
+          content: "About me";
+          position: absolute;
+          top: 0;
           left: 0;
-          right: 0;
-          margin: 0 auto;
-          bottom: 15%;
-          border: 1px solid $secondary-color-01;
-          text-decoration: none;
-          background: $secondary-color-01;
+          width: 100%;
+          height: 100%;
+          background-color: #363636;
+          color: #ff0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.5s;
         }
+
+        &::after {
+          content: "Coming Soon";
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background-color: #363636;
+          color: #ff0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.5s;
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        &:hover {
+          &:before {
+            left: 100%;
+            transform: translateX(100%);
+            opacity: 0;
+          }
+          &:after {
+            left: 0;
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+        // @media only screen and (max-width: $screen-xs) {
+        //   position: fixed;
+        //   left: 0;
+        //   right: 0;
+        //   margin: 0 auto;
+        //   bottom: 15%;
+        //   border: 1px solid $secondary-color-01;
+        //   text-decoration: none;
+        //   background: $secondary-color-01;
+        // }
 
         //&:hover {
         //  background: transparent;
@@ -193,7 +247,6 @@
   }
 }
 
-
 .LoginPage,
 .SignupPage {
   background: $primary-gradiant !important;
@@ -230,7 +283,6 @@
     }
     @media only screen and (max-width: 1599px) {
       max-width: 1170px;
-
     }
 
     .school-lottie {
@@ -266,9 +318,7 @@
   }
 }
 
-
 .AboutMe {
-
   .course-page-wrapper {
     .course-banner {
       position: relative;
@@ -288,7 +338,12 @@
         height: 100%;
         left: 0;
         top: 0;
-        background: linear-gradient(90deg, #05283C, rgba(4, 14, 29, 0.38), rgba(4, 6, 19, 18%));
+        background: linear-gradient(
+          90deg,
+          #05283c,
+          rgba(4, 14, 29, 0.38),
+          rgba(4, 6, 19, 18%)
+        );
         z-index: 2;
         @media only screen and (max-width: $screen-xs) {
           display: none;
@@ -354,7 +409,9 @@
         }
       }
 
-      .review-wrapper, .share-wrapper, .attended-profile-wrapper {
+      .review-wrapper,
+      .share-wrapper,
+      .attended-profile-wrapper {
         display: flex;
         align-items: center;
         margin-bottom: 30px;
@@ -362,7 +419,8 @@
           display: none;
         }
 
-        i.fa-star, i.fa-arrow-up-from-bracket {
+        i.fa-star,
+        i.fa-arrow-up-from-bracket {
           color: $secondary-color-01;
         }
 
@@ -424,7 +482,6 @@
             border-radius: 0;
           }
         }
-
       }
 
       .chat-wrapper {
@@ -595,7 +652,6 @@
     }
 
     .slider-wrapper-div {
-
       .carousel-wrapper {
         margin-top: 30px;
         @media only screen and (max-width: $screen-xs) {
@@ -609,7 +665,8 @@
 .SettingPage {
   .setting-page-wrapper {
     .setting-banner {
-      background: url("../images/setting-banner-background.svg") no-repeat center;
+      background: url("../images/setting-banner-background.svg") no-repeat
+        center;
       background-size: cover;
       padding: 144px 0 0;
       position: relative;
@@ -630,7 +687,6 @@
         @media only screen and (max-width: $screen-xs) {
           transform: unset;
         }
-
 
         .profile-setting-head {
           display: flex;
@@ -793,7 +849,6 @@
                 }
                 @media only screen and (max-width: $screen-xs) {
                   padding: 22px 25px;
-
                 }
 
                 span {
@@ -883,7 +938,6 @@
       }
     }
   }
-
 }
 
 .ChatPage {
@@ -896,7 +950,6 @@
   }
 
   .chat-page-wrapper {
-
     background: url("../images/video-playback-background.png") no-repeat;
     background-position: center;
     //background-position-Y: 100%;
@@ -906,8 +959,6 @@
       background-position-x: 44%;
       background-position-y: center;
     }
-
-
   }
 }
 
@@ -1150,7 +1201,6 @@
   }
 }
 
-
 //   ******** Forms **********//
 .form {
   @media screen and (max-width: $screen-xs) {
@@ -1279,7 +1329,7 @@
   }
 
   .continue-heading {
-   padding-left: 30px;
+    padding-left: 30px;
   }
 
   .continue-body {
@@ -1292,7 +1342,7 @@
     }
 
     .img-div {
-      background:$primary-color-02;
+      background: $primary-color-02;
       width: 200px;
       height: 200px;
       border-radius: 50%;
@@ -1316,7 +1366,6 @@
     }
 
     .content-div {
-
       @media only screen and (max-width: $screen-xs) {
         padding: 0;
       }
@@ -1325,13 +1374,11 @@
         margin-bottom: 20px;
         display: block;
         @media only screen and (max-width: $screen-xs) {
-
         }
       }
 
       p {
         margin: 0;
-
       }
     }
   }
@@ -1344,9 +1391,8 @@
       height: 11px;
       position: relative;
 
-
       .progress-bar {
-        background: #92CB7A;
+        background: #92cb7a;
         height: 100%;
         position: absolute;
         top: 0;
@@ -1450,16 +1496,12 @@
 
     .owl-dot {
       span {
-
       }
 
       &.active {
         span {
-
         }
       }
-
-
     }
   }
 }
@@ -1520,7 +1562,8 @@
       text-align: left;
       animation: example 5s linear 1s infinite;
 
-      strong, p {
+      strong,
+      p {
         font-size: 18px;
         display: inline-block;
         margin-right: 5px;
@@ -1531,27 +1574,26 @@
     @keyframes example {
       0% {
         transform: translateY(0);
-        opacity: 1
+        opacity: 1;
       }
       25% {
         transform: translateY(-10px);
-        opacity: 0.8
+        opacity: 0.8;
       }
       50% {
         transform: translateY(-20px);
-        opacity: 0.6
+        opacity: 0.6;
       }
       75% {
         transform: translateY(-30px);
-        opacity: 0.4
+        opacity: 0.4;
       }
       100% {
         transform: translateY(-40px);
-        opacity: 0.2
+        opacity: 0.2;
       }
     }
   }
-
 }
 
 ///************ chat-member-********
@@ -1641,12 +1683,12 @@
       margin-left: 15px;
       width: 161px;
     }
-    .mc-speedometer{
-      .arc-container{
-        .arc{
+    .mc-speedometer {
+      .arc-container {
+        .arc {
           margin: 0 auto;
         }
-        .arc-bg{
+        .arc-bg {
           top: 0;
           left: 0;
           right: 0;
@@ -1697,7 +1739,6 @@
       min-width: 120vw;
       overflow: hidden;
 
-
       .carousel__track {
         .carousel__slide {
           .slider-wrapper {
@@ -1713,7 +1754,6 @@
               margin: 0 10px 0 0;
               padding: 8px 8px 21px 8px;
             }
-
 
             .image-wrapper {
               //height: 248px;
@@ -1755,7 +1795,8 @@
                 margin: 7px 0 12px 0;
               }
 
-              h3, p {
+              h3,
+              p {
                 overflow: hidden;
                 text-overflow: ellipsis;
                 display: -webkit-box;
@@ -1780,7 +1821,6 @@
                     font-size: 16px;
                     line-height: 37px;
 
-
                     span {
                       display: inline;
                       margin-left: 5px;
@@ -1803,7 +1843,7 @@
                 position: relative;
 
                 .progress-bar {
-                  background: #92CB7A;
+                  background: #92cb7a;
                   height: 100%;
                   position: absolute;
                   top: 0;
@@ -1823,7 +1863,8 @@
       }
     }
 
-    .carousel__prev, .carousel__next {
+    .carousel__prev,
+    .carousel__next {
       background: transparent;
       width: 33px;
       height: 33px;
@@ -1908,7 +1949,7 @@
             }
 
             .progress-bar {
-              background: #92CB7A;
+              background: #92cb7a;
               height: 100%;
               position: absolute;
               top: 0;
@@ -1934,15 +1975,13 @@
 .getstarted,
 .LoginPage,
 .SignupPage,
-.CoursePage, .ProgressPage, .SettingPage {
+.CoursePage,
+.ProgressPage,
+.SettingPage {
   @media screen and (max-width: $screen-xs) {
     height: calc(var(--vh, 1vh) * 100);
   }
 
   &.light {
-
   }
 }
-
-
-
