@@ -8,7 +8,7 @@
         <router-link to="#" class="hover">Azeem U Rehman</router-link>
       </h1>
       <p>
-        A Front End Web Developer</p>
+        A Vuejs and Laravel Developer</p>
       <router-link to="#" class="btn-style">
         About Me
       </router-link>
